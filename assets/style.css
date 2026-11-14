@@ -497,4 +497,30 @@ footer a:hover { color: var(--text); }
 .next-story a { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
 .next-story .lbl { font-size: 13px; color: var(--text-3); }
 .next-story h4 { margin: 4px 0 0; font-size: 24px; letter-spacing: -.02em; }
-.story .nav { position: relative; }
+
+/* =====================================================================
+   Floating capsule nav (replaces the full-width bar everywhere)
+   ===================================================================== */
+.nav {
+  position: fixed; top: 14px; left: 50%; transform: translateX(-50%);
+  width: min(720px, calc(100% - 24px)); height: 52px; border-radius: 999px;
+  background: rgba(255, 255, 255, .62);
+  backdrop-filter: saturate(180%) blur(18px); -webkit-backdrop-filter: saturate(180%) blur(18px);
+  border: 1px solid rgba(16, 17, 20, .06);
+  box-shadow: 0 1px 1px rgba(16,17,20,.03), 0 10px 30px -14px rgba(16,17,20,.18);
+  transition: background .25s, box-shadow .25s, width .35s cubic-bezier(.2,.8,.2,1);
+}
+.nav.scrolled { background: rgba(255,255,255,.82); border-color: rgba(16,17,20,.08); box-shadow: 0 1px 1px rgba(16,17,20,.04), 0 14px 36px -14px rgba(16,17,20,.24); }
+.nav .wrap { max-width: none; height: 100%; padding: 0 7px 0 10px; }
+.logo { gap: 9px; font-size: 14.5px; }
+.logo-mark { width: 30px; height: 30px; border-radius: 50%; font-size: 13px; }
+.nav-links { gap: 2px; }
+.nav-links a { font-size: 13.5px; padding: 7px 12px; border-radius: 999px; }
+.nav-links a:hover { background: rgba(16,17,20,.05); }
+.kbd-btn { border-radius: 999px; height: 36px; padding: 0 10px 0 14px; margin-left: 4px; background: rgba(16,17,20,.04); border-color: transparent; }
+.kbd-btn:hover { background: rgba(16,17,20,.07); border-color: transparent; }
+.kbd-btn kbd { background: #fff; }
+.nav-links a.nav-cta { background: var(--text); color: #fff; padding: 8px 16px; margin-left: 6px; }
+.nav-links a.nav-cta:hover { background: #24262c; color: #fff; }
+.p-hero { padding-top: 140px; }
+@media (max-width: 640px) { .logo .name { display: none; } }
