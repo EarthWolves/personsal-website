@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Why I started building Merlo · Rohan Raval</title>
+  <title>Why I started Merlo · Rohan Raval</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../assets/style.css" />
 </head>
-<body data-root="../">
+<body class="story" data-root="../">
 <div class="progress"></div>
 
 <nav class="nav">
@@ -24,24 +24,105 @@
   </div>
 </nav>
 
-<main class="wrap">
-  <article class="article">
-    <p class="eyebrow"><span class="dot"></span>Story · 4 min read</p>
-    <h1>Why I started building Merlo</h1>
-    <div class="byline"><span>Rohan Raval</span><span>·</span><span>Nov 2026</span></div>
-    <div class="cover ph g6"></div>
-
-    <div class="prose">
-      <p>This is a sample post showing how your writing will look. It has a large headline, a wide cover image, a comfortable line length, and a thin reading-progress bar at the top of the page.</p>
-      <p>Your real story goes here: the moment you noticed the problem, the first version you built, and what happened when you showed it to people.</p>
-      <blockquote>Pull quotes like this one break up long sections and highlight the line you want people to remember.</blockquote>
-      <h2>What I got wrong first</h2>
-      <p>Section headings keep long pieces easy to skim. Lessons work well as short, honest sections.</p>
-      <div class="callout"><strong>Lesson.</strong> Callouts like this hold a single takeaway, and could later hold an interactive demo of a project.</div>
-      <p>End each post by inviting the reader to <a href="../index.html#contact">get in touch</a>. That ties every story back to contacting you.</p>
+<!-- Apple-style local nav: sticks once the main nav scrolls away -->
+<div class="localnav">
+  <div class="wrap">
+    <span class="ln-title">Why I started Merlo</span>
+    <div class="ln-right">
+      <a class="ln-link" href="#story">Story</a>
+      <a class="ln-link" href="#numbers">Numbers</a>
+      <a class="ln-link" href="#lessons">Lessons</a>
+      <a class="pill-btn" href="../index.html#contact">Get in touch</a>
     </div>
-  </article>
-</main>
+  </div>
+</div>
+
+<!-- HERO -->
+<header class="p-hero">
+  <div class="wrap">
+    <p class="kicker reveal">Story</p>
+    <h1 class="reveal">Why I started Merlo.</h1>
+    <p class="tagline reveal">The problem I couldn't stop thinking about, and what I did about it.</p>
+    <p class="meta reveal">Nov 2026 · 4 min read</p>
+  </div>
+  <div class="visual ph g6 reveal"></div>
+</header>
+
+<!-- HIGHLIGHTS: swipeable, like Apple's "Get the highlights" -->
+<section class="p-section" id="story">
+  <div class="wrap p-head reveal">
+    <h2>Get the highlights.</h2>
+    <p>The whole story in four moments. Swipe through.</p>
+  </div>
+  <div class="highlights reveal">
+    <div class="hl"><div class="ph g1"></div><div class="txt"><span class="n">01</span><h3>The moment it clicked.</h3><p>The day you noticed the problem.</p></div></div>
+    <div class="hl"><div class="ph g2"></div><div class="txt"><span class="n">02</span><h3>The first ugly version.</h3><p>What you built in the first weekend.</p></div></div>
+    <div class="hl"><div class="ph g3"></div><div class="txt"><span class="n">03</span><h3>The first real user.</h3><p>Who they were and what they said.</p></div></div>
+    <div class="hl"><div class="ph g5"></div><div class="txt"><span class="n">04</span><h3>Where it is now.</h3><p>And what's next.</p></div></div>
+  </div>
+</section>
+
+<!-- STATEMENT -->
+<section class="p-section gray">
+  <div class="wrap">
+    <p class="statement reveal">Everyone said it was a small problem. <span class="dim">I couldn't stop seeing it everywhere.</span></p>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="p-section" id="numbers">
+  <div class="wrap">
+    <div class="p-head reveal"><h2>By the numbers.</h2><p>Swap these for your real ones.</p></div>
+    <div class="stats">
+      <div class="stat reveal"><div class="num">100</div><div class="lbl">conversations with users</div></div>
+      <div class="stat reveal"><div class="num">3</div><div class="lbl">versions thrown away</div></div>
+      <div class="stat reveal"><div class="num">1</div><div class="lbl">problem worth solving</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- STORY TEXT -->
+<section class="p-section gray">
+  <div class="wrap p-prose reveal">
+    <h3>How it started</h3>
+    <p>This is where the full story goes, in a narrow, easy-to-read column, the way Apple puts the details between its big visual moments.</p>
+    <p>Keep each section short. Let the big headlines, numbers and images do the heavy lifting, and use text to fill in the details.</p>
+    <h3>What I got wrong</h3>
+    <p>Honest stories work best. Say what failed, why, and what you changed.</p>
+  </div>
+</section>
+
+<!-- LESSONS BENTO -->
+<section class="p-section" id="lessons">
+  <div class="wrap">
+    <div class="p-head reveal"><h2>What I learned.</h2></div>
+    <div class="bento">
+      <div class="b1 reveal"><div class="big">Talk to users before writing code.</div><p>One line on why this mattered.</p></div>
+      <div class="b2 reveal"><div class="big">Ship ugly.</div><p>Speed beat polish.</p></div>
+      <div class="b3 reveal"><div class="big">Say no.</div><p>Focus is a feature.</p></div>
+      <div class="b4 reveal"><div class="big">The tool you build for yourself is often the product.</div><p>How my own CRM came about.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="p-cta">
+  <div class="wrap reveal">
+    <h2>Want to talk about it?</h2>
+    <p>I reply to every message.</p>
+    <div class="ctas">
+      <a class="pill-btn" data-link="calendly">Book a call</a>
+      <a class="chev" data-link="email">Email me</a>
+    </div>
+  </div>
+</section>
+
+<div class="wrap next-story">
+  <a href="why-i-started.html">
+    <div><span class="lbl">Next story</span><h4>100 cold calls.</h4></div>
+    <span class="chev">Read</span>
+  </a>
+</div>
 
 <footer>
   <div class="wrap">
