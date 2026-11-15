@@ -8,7 +8,7 @@ const SITE = {
   calendly: "https://calendly.com/rohanraval/new-meeting",
   // Where the contact form posts. Leave empty to fall back to email.
   // Later: a public endpoint on the CRM, e.g. "https://crm.rraval.com/api/public/inbound"
-  crmEndpoint: "",
+  crmEndpoint: "https://crm.rraval.com/api/public/contact",
 };
 
 // Fill any element with data-link / data-text from SITE
@@ -58,12 +58,17 @@ if (form) {
     const d = Object.fromEntries(new FormData(form));
     d.topic = topic;
     if (SITE.crmEndpoint) {
+      const btn = form.querySelector('[type="submit"]'), label = btn.textContent;
+      btn.disabled = true; btn.textContent = "Sending…";
       try {
         const r = await fetch(SITE.crmEndpoint, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(d) });
         if (!r.ok) throw new Error();
-        form.reset(); toast("Sent — I'll get back to you soon");
+        form.reset(); topic = "";
+        form.querySelectorAll(".chip").forEach((x) => x.setAttribute("aria-pressed", "false"));
+        btn.textContent = "Sent ✓"; toast("Thanks! I'll get back to you soon.");
+        setTimeout(() => { btn.textContent = label; btn.disabled = false; }, 4000);
         return;
-      } catch { /* fall through to email */ }
+      } catch { btn.textContent = label; btn.disabled = false; /* fall through to email */ }
     }
     const subject = encodeURIComponent(`${topic ? topic + " — " : ""}from ${d.name || "rraval.com"}`);
     const body = encodeURIComponent(`${d.message || ""}\n\n— ${d.name || ""} (${d.email || ""})`);
