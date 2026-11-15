@@ -381,3 +381,19 @@ footer a.secret { color: var(--text-3); opacity: .5; }
 .chips-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
 .chips-row span { font-size: 14px; background: #fff; border-radius: 999px; padding: 6px 12px; }
 .rc-grid .dark .chips-row span { background: #1c1c1e; color: #f5f5f7; }
+
+/* Read-more on résumé cards */
+.more { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .45s cubic-bezier(.2,.8,.2,1); }
+.more > ul { overflow: hidden; margin: 0; padding: 0 0 0 18px; font-size: 15.5px; line-height: 1.55; color: var(--text); }
+.more li { margin: 6px 0; }
+.more li:first-child { margin-top: 18px; }
+.open .more { grid-template-rows: 1fr; }
+.read-btn { margin-top: 18px; align-self: flex-start; background: none; border: 0; padding: 0; font: inherit; font-size: 15px; color: var(--link); cursor: pointer; display: inline-flex; align-items: center; gap: 6px; }
+.read-btn:hover { text-decoration: underline; text-underline-offset: 3px; }
+.read-btn .pm { display: inline-grid; place-items: center; width: 22px; height: 22px; border-radius: 50%; background: var(--link); color: #fff; font-size: 15px; line-height: 1; transition: transform .3s; }
+.open .read-btn .pm { transform: rotate(45deg); }
+.rb-feature .more > ul { color: #f5f5f7; max-width: 720px; margin: 0 auto; text-align: left; }
+.rb-feature .read-btn { align-self: center; margin: 28px auto 0; color: #2997ff; }
+.rb-feature .read-btn .pm { background: #2997ff; }
+.rb-card .big + p + .read-btn, .rb-card .read-btn { margin-top: 18px; }
+.rb-cards { align-items: start; }

@@ -20,31 +20,62 @@
       <a href="index.html#writing" class="hide-sm">Writing</a>
       <a href="gallery.html" class="hide-sm">Gallery</a>
       <a href="index.html#contact" class="nav-cta">Contact</a>
-      <button class="kbd-btn" data-cmdk><span class="label">Search</span><kbd>⌘K</kbd></button>
+      <button class="kbd-btn" data-cmdk aria-label="Search"><span class="label">Search</span><kbd>⌘K</kbd></button>
     </div>
   </div>
 </nav>
 
 <main class="wrap">
-  <div class="resume">
-    <span class="found">You found the résumé. Most people don't scroll this far.</span>
-    <h1>Rohan Raval</h1>
-    <p class="sub">Founder of Merlo · UC San Diego</p>
-    <div class="ctas" style="justify-content:flex-start"><a class="pill-btn" href="index.html#contact">Get in touch</a><a class="chev" href="#">Download PDF</a></div>
-
-    <h2>Experience</h2>
-    <div class="r-item"><span class="when">2026 — Now</span><div><h3>Founder, Merlo</h3><p>What you built, and one number that shows it worked.</p></div></div>
-    <div class="r-item"><span class="when">20XX — 20XX</span><div><h3>Role, Company</h3><p>One line on the impact you had.</p></div></div>
-
-    <h2>Education</h2>
-    <div class="r-item"><span class="when">20XX — 20XX</span><div><h3>UC San Diego</h3><p>Degree, major.</p></div></div>
+  <div class="rz">
+    <div class="rz-hero reveal">
+      <span class="found" style="display:inline-block;font-size:14px;color:var(--blue);background:#e8f2fd;border-radius:999px;padding:6px 14px;margin-bottom:20px">You found the résumé. Most people don't scroll this far.</span>
+      <h1>Rohan Raval</h1>
+      <p class="tagline">Co-founder of Merlo. Data Science at UC San Diego.</p>
+      <div class="ctas"><a class="pill-btn" href="index.html#contact">Get in touch</a><a class="chev" data-link="linkedin">LinkedIn</a></div>
+    </div>
+    <div class="rz-stats">
+      <div class="rz-stat reveal"><div class="num grad-text">100+</div><div class="lbl">contractors interviewed before building Merlo</div></div>
+      <div class="rz-stat reveal"><div class="num grad-text">2 min</div><div class="lbl">per Merlo estimate, down from a day</div></div>
+      <div class="rz-stat reveal"><div class="num grad-text">~100×</div><div class="lbl">faster option pricing for traders at Caption Partners</div></div>
+      <div class="rz-stat reveal"><div class="num grad-text">#1</div><div class="lbl">Best Financial Hack at Princeton's hackathon</div></div>
+    </div>
+    <h2 class="rz-h2 center reveal">Now building.</h2>
+    <div class="rb-feature reveal" style="display:flex;flex-direction:column">
+      <p class="kicker">Co-founder · Feb 2026 — Now</p>
+      <h3>Merlo.</h3>
+      <p class="tagline">The best estimating app in construction. AI writes the estimate, and every line is traced to its source.</p>
+      <div class="rb-steps">
+        <div><b>100+</b><span>contractors interviewed across California</span></div>
+        <div><b>1</b><span>paying customer, and counting</span></div>
+        <div><b>2 min</b><span>per estimate, down from a full day</span></div>
+        <div><b>100%</b><span>of line items traced back to the plans</span></div>
+      </div>
+      <div class="more"><ul><li>Spent months interviewing 100+ general contractors and subcontractors across California to find the problem worth solving.</li><li>Built 3 MVPs and pivoted on customer feedback before landing on the current estimating platform.</li><li>Designed a 6-stage agent pipeline, together with our users, that produces auditable estimates with every line item traced to its source.</li><li>Parallelized document ingestion with async workers, cutting pricing time from 30+ minutes to about 2.</li><li>Built a FastMCP server with 40+ agent tools, scoped to each pipeline stage so agents pick the right one.</li><li>Designed a FastAPI + async SQLAlchemy backend on PostgreSQL that serves both REST and MCP.</li></ul></div><button class="read-btn" type="button" aria-expanded="false"><span class="pm">+</span><span class="t">Read more</span></button>
+    </div>
+    <h2 class="rz-h2 center reveal">Before Merlo.</h2>
+    <div class="rb-cards">
+      <div class="rb-card reveal"><span class="co">Caption Partners</span><h3>Software Engineering Intern</h3><div class="meta">Jun — Aug 2026 · New York</div><div class="big grad-text">~100×</div><p>faster option pricing for traders.</p><div class="more"><ul><li>Built and maintained internal APIs and the pricer used directly by traders and TradeOps.</li><li>Made American option pricing (CRR binomial) ~100× faster with Numba JIT, cutting latency on trader queries.</li><li>Unified stock data from several vendors behind a single API, replacing per-lookup vendor calls with an in-memory index of valid tickers that handles many ticker formats.</li><li>Built an API proxy for internal services, instrumented with Logfire to show health, latency and errors across 11 routes in one dashboard.</li><li>Benchmarked vendor dividend data against Bloomberg and exposed a systematic error in 100% of projections.</li></ul></div><button class="read-btn" type="button" aria-expanded="false"><span class="pm">+</span><span class="t">Read more</span></button></div>
+      <div class="rb-card reveal"><span class="co">Alchemy Capital</span><h3>Quantitative Research Intern</h3><div class="meta">Jul — Sep 2025 · Mumbai</div><div class="big grad-text">400–600 bps</div><p>of alpha over benchmarks across 1,500+ stocks.</p><div class="more"><ul><li>Worked with the fund manager to develop and backtest stock-picking models.</li><li>Researched and backtested equity strategies across 1,500+ NSE stocks, beating benchmarks by 400–600 bps.</li><li>Engineered 30+ fundamental factors and distilled them into a top-8 composite through hyperparameter tuning.</li><li>Built a Markov regime-switching model that shifts exposure between bull and bear states.</li><li>Built a backtesting framework that evaluates 100+ regime-varying strategies with volatility targeting.</li></ul></div><button class="read-btn" type="button" aria-expanded="false"><span class="pm">+</span><span class="t">Read more</span></button></div>
+      <div class="rb-card reveal"><span class="co">RaptorxAI</span><h3>Data Engineer</h3><div class="meta">Sep — Dec 2025 · San Diego</div><div class="big grad-text">21</div><p>REST endpoints for an LLM-agent platform with MCP tools.</p><div class="more"><ul><li>Built a full-stack platform for LLM agents with MCP tools and persistent chat history.</li><li>Implemented 21 FastAPI/SQLAlchemy REST endpoints over a PostgreSQL schema storing user configs and history.</li><li>Integrated MCP servers into chat with runtime tool discovery, tool-call parsing and LLM follow-up on results.</li></ul></div><button class="read-btn" type="button" aria-expanded="false"><span class="pm">+</span><span class="t">Read more</span></button></div>
+      <div class="rb-card reveal"><span class="co">GetOnData Solutions</span><h3>Data Engineering Intern</h3><div class="meta">Nov — Dec 2024 · Ahmedabad</div><div class="big grad-text">1</div><p>sales-forecasting API, from Azure ETL to Power BI.</p><div class="more"><ul><li>Built Azure Data Factory ETL pipelines that ingest and validate data from several third-party APIs into SQL databases.</li><li>Designed SARIMA and regression models for sales forecasts using seasonality and trend (MSE ≈ 0.02).</li><li>Served forecasts through a REST API and into Power BI dashboards for real-time KPI monitoring.</li></ul></div><button class="read-btn" type="button" aria-expanded="false"><span class="pm">+</span><span class="t">Read more</span></button></div>
+    </div>
+    <h2 class="rz-h2 center reveal">Also.</h2>
+    <div class="rb-cards">
+      <div class="rb-card reveal"><span class="co">Project · Mar 2025</span><h3>MarketPulse</h3><div class="meta">Princeton hackathon</div><div class="big grad-text">Winner</div><p>Best Financial Hack (Capital One). Turns live news into ticker-level price signals.</p><div class="more"><ul><li>Deployed a real-time web scraper processing 1K+ headlines a day, using a fine-tuned spaCy NER model to map macro news to ticker-level price moves through a Flask API refreshed every 5 minutes.</li><li>Engineered features from news and market data to train an MLPRegressor predicting same-day % price change (MSE 0.0006).</li><li>Built a FAISS-powered RAG pipeline over SEC 10-K filings to instantly answer questions on revenue and risks.</li></ul></div><button class="read-btn" type="button" aria-expanded="false"><span class="pm">+</span><span class="t">Read more</span></button></div>
+      <div class="rb-card reveal"><span class="co">Education</span><h3>UC San Diego</h3><div class="meta">B.S. Data Science · 2023 — 2027 · La Jolla</div><div class="big grad-text">B.S.</div><p>Machine learning, data structures and algorithms, probability, mathematical statistics, reinforcement learning.</p></div>
+    </div>
   </div>
 </main>
-
+<script>
+document.querySelectorAll('.read-btn').forEach((b) => b.addEventListener('click', () => {
+  const card = b.parentElement, open = card.classList.toggle('open');
+  b.setAttribute('aria-expanded', open); b.querySelector('.t').textContent = open ? 'Show less' : 'Read more';
+}));
+</script>
 <footer>
   <div class="wrap">
     <span>Copyright © 2026 Rohan Raval</span>
-    <span><a data-link="email">Email</a> &nbsp;|&nbsp; <a data-link="linkedin">LinkedIn</a> &nbsp;|&nbsp; <a data-link="calendly">Book a call</a> &nbsp;|&nbsp; <a href="resume.html" class="secret">résumé</a></span>
+    <span><a data-link="email">Email</a> &nbsp;|&nbsp; <a data-link="linkedin">LinkedIn</a> &nbsp;|&nbsp; <a data-link="calendly">Book a call</a></span>
   </div>
 </footer>
 <script src="assets/site.js"></script>
