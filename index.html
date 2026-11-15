@@ -7,7 +7,7 @@
   <meta name="description" content="Rohan Raval — building Merlo. Stories and lessons from the road of entrepreneurship." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
@@ -16,125 +16,69 @@
   <div class="wrap">
     <a href="index.html" class="logo"><span class="logo-mark">R</span><span class="name">Rohan Raval</span></a>
     <div class="nav-links">
+      <a href="#merlo" class="hide-sm">Merlo</a>
       <a href="#writing" class="hide-sm">Writing</a>
       <a href="gallery.html" class="hide-sm">Gallery</a>
-      <a href="#contact">Contact</a>
-      <button class="kbd-btn" data-cmdk><span class="label">Search</span><kbd>⌘K</kbd></button>
+      <a href="#contact" class="nav-cta">Contact</a>
+      <button class="kbd-btn" data-cmdk aria-label="Search"><span class="label">Search</span><kbd>⌘K</kbd></button>
     </div>
   </div>
 </nav>
 
-<header class="hero">
+<!-- ============ HERO (with contact right here) ============ -->
+<header class="home-hero">
   <div class="wrap">
-    <a href="#merlo" class="pill reveal"><span class="tag">Now</span>Building Merlo <span class="arrow">→</span></a>
-    <h1 class="display reveal">Building things, and writing down what I learn.</h1>
-    <p class="lede reveal">I'm Rohan. I'm an entrepreneur, currently building Merlo. This is where I share the stories, the mistakes, and the lessons along the way.</p>
-    <div class="hero-actions reveal">
-      <a href="#contact" class="btn primary">Get in touch</a>
-      <a href="#writing" class="btn">Read the writing</a>
+    <p class="kicker reveal">Rohan Raval</p>
+    <h1 class="reveal">Building Merlo.</h1>
+    <p class="tagline reveal">And writing down everything I learn along the way.</p>
+    <div class="ctas reveal">
+      <a class="pill-btn" data-link="calendly">Book a call</a>
+      <a class="pill-btn ghost" href="#contact">Get in touch</a>
+    </div>
+    <div class="quick-contact reveal">
+      <a class="qc" data-link="email"><span class="ok"></span><span data-text="email"></span></a>
+      <a class="qc" data-link="linkedin"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9.75h4V21H3V9.75Zm6.5 0h3.8v1.6h.06c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.77 2.65 4.77 6.1V21h-4v-4.9c0-1.17-.02-2.67-1.63-2.67-1.63 0-1.88 1.27-1.88 2.59V21h-3.9V9.75Z"/></svg>LinkedIn</a>
     </div>
   </div>
+  <div class="hero-visual reveal" aria-hidden="true"></div>
 </header>
 
-<!-- ============ CONTACT (the biggest thing) ============ -->
-<section class="block" id="contact">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <div>
-        <p class="eyebrow"><span class="dot"></span>Contact</p>
-        <h2 class="title">Reaching me is easy.</h2>
-        <p class="sub">I check my email often and reply to every message. If you send one, I'll get back to you.</p>
-      </div>
-    </div>
-
-    <div class="contact-grid">
-      <a class="card c-cal reveal" data-link="calendly">
-        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></div>
-        <h3>Talk to me about Merlo</h3>
-        <p>Investor, early user, potential teammate, or just curious? Pick a time on my calendar. It takes 30 seconds.</p>
-        <div class="meta"><span>calendly.com/…</span><span>Book a call ↗</span></div>
-      </a>
-
-      <div class="card c-email reveal">
-        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></svg></div>
-        <h3>Email</h3>
-        <p>The fastest way to reach me.</p>
-        <div class="copy-row"><a data-link="email" data-text="email"></a><button class="copy-btn" data-copy="email">Copy</button></div>
-        <span class="status">I usually reply within a day</span>
-      </div>
-
-      <a class="card c-li reveal" data-link="linkedin">
-        <div class="icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9.75h4V21H3V9.75Zm6.5 0h3.8v1.6h.06c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.77 2.65 4.77 6.1V21h-4v-4.9c0-1.17-.02-2.67-1.63-2.67-1.63 0-1.88 1.27-1.88 2.59V21h-3.9V9.75Z"/></svg></div>
-        <h3>LinkedIn</h3>
-        <p>Connect, or send a message there.</p>
-        <div class="meta"><span>linkedin.com/in/…</span><span>↗</span></div>
-      </a>
-
-      <div class="card c-form reveal">
-        <h3>Or leave a message here</h3>
-        <p>It comes straight to me.</p>
-        <form class="msg">
-          <div class="chips full" role="group" aria-label="Topic">
-            <button type="button" class="chip" aria-pressed="false">Merlo</button>
-            <button type="button" class="chip" aria-pressed="false">Investing</button>
-            <button type="button" class="chip" aria-pressed="false">Collaborating</button>
-            <button type="button" class="chip" aria-pressed="false">Just saying hi</button>
-          </div>
-          <input class="field" name="name" placeholder="Your name" required />
-          <input class="field" name="email" type="email" placeholder="Your email" required />
-          <textarea class="field full" name="message" placeholder="What's on your mind?" required></textarea>
-          <div class="form-foot full">
-            <span class="form-note">I read every message.</span>
-            <button class="btn primary" type="submit">Send message</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ============ MERLO ============ -->
-<section class="block" id="merlo">
-  <div class="wrap feature">
-    <div class="reveal">
-      <p class="eyebrow"><span class="dot"></span>What I'm building</p>
-      <h2 class="title">Merlo.</h2>
-      <p class="sub">A one-line description of Merlo goes here: what it does, who it's for, and why it matters. <!-- TODO: replace --></p>
-      <div class="hero-actions">
-        <a class="btn primary" data-link="calendly">Talk to me about Merlo</a>
-        <a class="btn" href="#">Visit Merlo ↗</a>
+<section class="section" id="merlo">
+  <div class="wrap">
+    <div class="tile wide reveal">
+      <p class="kicker">What I'm building</p>
+      <h3>Merlo.</h3>
+      <p class="tagline">One line about what Merlo does goes here.</p>
+      <div class="ctas">
+        <a class="pill-btn" data-link="calendly">Talk to me about Merlo</a>
+        <a class="chev" href="#">Visit Merlo</a>
       </div>
-    </div>
-    <div class="window reveal" aria-hidden="true">
-      <div class="window-bar"><span></span><span></span><span></span></div>
-      <div class="window-body">
-        <div class="wline" style="width:40%"></div>
-        <div class="wrow"><span class="b" style="background:#5e6ad2"></span><span class="grow">Product screenshot or live demo here</span><span class="mono">MRL-1</span></div>
-        <div class="wrow"><span class="b" style="background:#1f9d55"></span><span class="grow">Interactive projects slot into this frame</span><span class="mono">MRL-2</span></div>
-        <div class="wrow"><span class="b" style="background:#e5a33b"></span><span class="grow">Swap for an image, video or embed</span><span class="mono">MRL-3</span></div>
-        <div class="wline" style="width:70%"></div>
-        <div class="wline" style="width:55%"></div>
+      <div class="mock" aria-hidden="true">
+        <div class="bar"><span></span><span></span><span></span></div>
+        <div class="row"><b style="background:#0071e3"></b>Product screenshot or live demo goes here</div>
+        <div class="row"><b style="background:#1f9d55"></b>Interactive projects slot into this frame</div>
+        <div class="row"><b style="background:#f5a623"></b>Swap for an image, video or embed</div>
+        <div class="line" style="width:60%"></div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ============ WRITING ============ -->
-<section class="block" id="writing">
+<section class="section tight" id="writing">
   <div class="wrap">
-    <div class="section-head reveal">
-      <div>
-        <p class="eyebrow"><span class="dot"></span>Writing</p>
-        <h2 class="title">Stories from building.</h2>
-        <p class="sub">What I've learned about entrepreneurship, including the parts that didn't go well.</p>
-      </div>
+    <div class="s-head reveal">
+      <p class="kicker">Writing</p>
+      <h2>Stories from building.</h2>
+      <p>What I've learned about entrepreneurship, including the parts that didn't go well.</p>
     </div>
     <div class="tiles">
       <div class="tile wide reveal">
         <p class="kicker">New story</p>
         <h3>Why I started Merlo.</h3>
         <p class="tagline">The problem I couldn't stop thinking about.</p>
-        <div class="ctas"><a class="pill-btn" href="writing/why-i-started.html">Read the story</a><a class="chev" href="index.html#contact">Talk to me about it</a></div>
+        <div class="ctas"><a class="pill-btn" href="writing/why-i-started.html">Read the story</a><a class="chev" href="#contact">Talk to me about it</a></div>
         <div class="visual ph g6"></div>
       </div>
       <div class="tile reveal">
@@ -142,7 +86,7 @@
         <h3>100 cold calls.</h3>
         <p class="tagline">What rejection taught me.</p>
         <div class="ctas"><a class="pill-btn" href="writing/why-i-started.html">Read</a><a class="chev" href="writing/why-i-started.html">The one question that worked</a></div>
-        <div class="visual big-num"><span>100</span></div>
+        <div class="visual big-num"><span class="grad-text">100</span></div>
       </div>
       <div class="tile dark reveal">
         <p class="kicker">Project</p>
@@ -155,15 +99,65 @@
   </div>
 </section>
 
-<!-- ============ GALLERY PEEK ============ -->
-<section class="block" id="gallery">
+<!-- ============ CONTACT ============ -->
+<section class="section gray" id="contact">
   <div class="wrap">
-    <div class="section-head reveal">
-      <div>
-        <p class="eyebrow"><span class="dot"></span>Gallery</p>
-        <h2 class="title">Some photos I've taken.</h2>
+    <div class="s-head reveal">
+      <p class="kicker">Contact</p>
+      <h2>Let's talk.</h2>
+      <p>I check my email often and reply to every message. It won't get lost.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="c-card reveal">
+        <div class="icon" style="background:linear-gradient(135deg,#0a84ff,#0060df)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></div>
+        <h3>Talk about Merlo.</h3>
+        <p>Investor, early user, or future teammate? Pick a time that works for you.</p>
+        <div class="ctas"><a class="pill-btn" data-link="calendly">Book a call</a></div>
       </div>
-      <a href="gallery.html" class="link-arrow">See all photos →</a>
+      <div class="c-card reveal">
+        <div class="icon" style="background:linear-gradient(135deg,#34c759,#1f9d55)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></svg></div>
+        <h3>Email me.</h3>
+        <div class="email-line" data-text="email"></div>
+        <span class="status">Usually replies within a day</span>
+        <div class="ctas"><a class="pill-btn" data-link="email">Send email</a><button class="chev" data-copy="email" style="background:none;border:0;font:inherit;cursor:pointer;padding:0">Copy</button></div>
+      </div>
+      <div class="c-card reveal">
+        <div class="icon" style="background:linear-gradient(135deg,#0a66c2,#004182)"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9.75h4V21H3V9.75Zm6.5 0h3.8v1.6h.06c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.77 2.65 4.77 6.1V21h-4v-4.9c0-1.17-.02-2.67-1.63-2.67-1.63 0-1.88 1.27-1.88 2.59V21h-3.9V9.75Z"/></svg></div>
+        <h3>Connect.</h3>
+        <p>Follow along or send me a message on LinkedIn.</p>
+        <div class="ctas"><a class="pill-btn" data-link="linkedin">Open LinkedIn</a></div>
+      </div>
+    </div>
+
+    <div class="msg-card reveal">
+      <h3>Or leave a message here.</h3>
+      <p>It comes straight to me.</p>
+      <form class="msg">
+        <div class="chips full" role="group" aria-label="Topic">
+          <button type="button" class="chip" aria-pressed="false">Merlo</button>
+          <button type="button" class="chip" aria-pressed="false">Investing</button>
+          <button type="button" class="chip" aria-pressed="false">Collaborating</button>
+          <button type="button" class="chip" aria-pressed="false">Just saying hi</button>
+        </div>
+        <input class="field" name="name" placeholder="Your name" required />
+        <input class="field" name="email" type="email" placeholder="Your email" required />
+        <textarea class="field full" name="message" placeholder="What's on your mind?" required></textarea>
+        <div class="form-foot full">
+          <span class="form-note">I read every message.</span>
+          <button class="pill-btn" type="submit">Send message</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section class="section" id="gallery">
+  <div class="wrap">
+    <div class="s-head reveal">
+      <p class="kicker">Gallery</p>
+      <h2>Through my lens.</h2>
+      <div class="ctas"><a class="chev" href="gallery.html">See all photos</a></div>
     </div>
     <a href="gallery.html" class="peek reveal" aria-label="Open the gallery">
       <div class="ph g1"></div><div class="ph g2"></div><div class="ph g3"></div><div class="ph g6"></div>
@@ -173,8 +167,8 @@
 
 <footer>
   <div class="wrap">
-    <span>© 2026 Rohan Raval</span>
-    <span><a data-link="email">Email</a> · <a data-link="linkedin">LinkedIn</a> · <a href="resume.html" class="secret" title="psst">résumé</a></span>
+    <span>Copyright © 2026 Rohan Raval</span>
+    <span><a data-link="email">Email</a> &nbsp;|&nbsp; <a data-link="linkedin">LinkedIn</a> &nbsp;|&nbsp; <a data-link="calendly">Book a call</a> &nbsp;|&nbsp; <a href="resume.html" class="secret">résumé</a></span>
   </div>
 </footer>
 
