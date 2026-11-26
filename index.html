@@ -45,23 +45,69 @@
 <!-- ============ MERLO ============ -->
 <section class="section" id="merlo">
   <div class="wrap">
-    <div class="tile wide reveal">
+    <div class="s-head reveal">
       <p class="kicker">What I'm building</p>
-      <h3>Merlo.</h3>
-      <p class="tagline">The best estimating app in construction. Every line traced to its source.</p>
-      <div class="ctas">
-        <a class="pill-btn" data-link="calendly">Talk to me about Merlo</a>
-        <a class="chev" href="resume.html">How we got here</a>
+      <h2>Plans in. Estimate out.</h2>
+      <p>Merlo reads a full set of drawings, measures and prices every scope, and links each line item back to the sheet it came from.</p>
+    </div>
+
+    <div class="demo reveal" data-demo>
+      <div class="demo-top">
+        <span class="dots"><i></i><i></i><i></i></span>
+        <span class="demo-title">Example project · Tenant improvement, Level 1</span>
+        <span class="demo-status"><b></b>Estimate ready</span>
       </div>
-      <div class="mock" aria-hidden="true">
-        <div class="bar"><span></span><span></span><span></span></div>
-        <div class="row"><b style="background:#0071e3"></b>Upload plans and specs<span style="margin-left:auto;font-size:13px">PDF · drawings</span></div>
-        <div class="row"><b style="background:#af52de"></b>6-stage agent pipeline reads, measures and prices<span style="margin-left:auto;font-size:13px">~2 min</span></div>
-        <div class="row"><b style="background:#1f9d55"></b>Auditable estimate, every line item source-traced<span style="margin-left:auto;font-size:13px">Ready</span></div>
-        <div class="line" style="width:60%"></div>
+      <div class="demo-body">
+        <figure class="plan" aria-label="Floor plan with the selected line item highlighted">
+          <svg viewBox="0 0 420 300" role="img">
+            <defs>
+              <pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="8" stroke="currentColor" stroke-width="2"/></pattern>
+              <pattern id="act" width="14" height="14" patternUnits="userSpaceOnUse"><path d="M14 0H0V14" fill="none" stroke="currentColor" stroke-width="1"/></pattern>
+              <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#e6ebf2" stroke-width="1"/></pattern>
+            </defs>
+            <rect width="420" height="300" fill="url(#grid)"/>
+            <!-- slab -->
+            <g class="hl" data-k="0" style="--c:#0071e3"><rect x="30" y="30" width="360" height="240" fill="url(#hatch)"/></g>
+            <!-- ceiling -->
+            <g class="hl" data-k="3" style="--c:#c06bd8"><rect x="150" y="30" width="240" height="120" fill="url(#act)"/><rect x="150" y="150" width="120" height="120" fill="url(#act)"/><rect x="270" y="150" width="120" height="120" fill="url(#act)"/></g>
+            <!-- exterior walls -->
+            <rect x="30" y="30" width="360" height="240" fill="none" stroke="#1d1d1f" stroke-width="6"/>
+            <!-- interior partitions -->
+            <g class="hl walls" data-k="1" style="--c:#1f9d55" fill="none" stroke-width="4">
+              <path d="M150 30V90M150 114V270M150 150H190M214 150H390M270 150V200M270 224V270"/>
+            </g>
+            <!-- storefront -->
+            <g class="hl glass" data-k="4" style="--c:#f08a5d" stroke-width="3">
+              <path d="M190 30H360M30 60V200"/>
+            </g>
+            <!-- doors -->
+            <g class="hl doors" data-k="2" style="--c:#bf4800" fill="none" stroke-width="2">
+              <rect x="146" y="90" width="8" height="24" class="gap"/><path d="M150 90L174 90M174 90A24 24 0 0 1 150 114"/>
+              <rect x="190" y="146" width="24" height="8" class="gap"/><path d="M190 150V174M190 174A24 24 0 0 0 214 150"/>
+              <rect x="266" y="200" width="8" height="24" class="gap"/><path d="M270 224H294M294 224A24 24 0 0 0 270 200"/>
+              <rect x="70" y="266" width="28" height="8" class="gap"/><path d="M70 270V242M70 242A28 28 0 0 1 98 270"/>
+            </g>
+            <g class="room-labels"><text x="90" y="160">OPEN OFFICE</text><text x="270" y="95">CONFERENCE</text><text x="210" y="215">OFFICE</text><text x="330" y="215">BREAK</text></g>
+          </svg>
+          <figcaption><span class="sheet" data-sheet>S-101</span><span data-sheetname>Foundation plan</span></figcaption>
+        </figure>
+        <div class="items" role="list">
+          <button class="item" role="listitem" data-k="0" data-sheet="S-101" data-sheetname="Foundation plan" style="--c:#0071e3"><b></b><span class="desc">Concrete slab on grade, 4&Prime;<small>2,480 SF × $7.00</small></span><span class="amt">$17,360</span><span class="src">S-101</span></button>
+          <button class="item" role="listitem" data-k="1" data-sheet="A-101" data-sheetname="Floor plan" style="--c:#1f9d55"><b></b><span class="desc">Metal stud &amp; drywall partitions<small>412 LF × $52.00</small></span><span class="amt">$21,424</span><span class="src">A-101</span></button>
+          <button class="item" role="listitem" data-k="2" data-sheet="A-601" data-sheetname="Door schedule" style="--c:#bf4800"><b></b><span class="desc">Hollow metal doors &amp; frames<small>14 EA × $1,800</small></span><span class="amt">$25,200</span><span class="src">A-601</span></button>
+          <button class="item" role="listitem" data-k="3" data-sheet="A-201" data-sheetname="Reflected ceiling plan" style="--c:#c06bd8"><b></b><span class="desc">Acoustic ceiling tile, 2×2<small>1,960 SF × $5.00</small></span><span class="amt">$9,800</span><span class="src">A-201</span></button>
+          <button class="item" role="listitem" data-k="4" data-sheet="A-301" data-sheetname="Exterior elevations" style="--c:#f08a5d"><b></b><span class="desc">Aluminum storefront glazing<small>86 LF × $450</small></span><span class="amt">$38,700</span><span class="src">A-301</span></button>
+          <div class="items-foot"><span>5 of 46 line items</span><span>Subtotal <strong>$112,484</strong></span></div>
+        </div>
       </div>
     </div>
-    <div class="rz-stats" style="margin-top:12px">
+    <p class="demo-note">Illustrative example. Hover or tap a line item to see where it came from.</p>
+
+    <div class="ctas center reveal">
+      <a class="pill-btn" data-link="calendly">Talk to me about Merlo</a>
+      <a class="chev" href="resume.html">How we got here</a>
+    </div>
+    <div class="rz-stats" style="margin-top:56px">
       <div class="rz-stat reveal"><div class="num grad-text">100+</div><div class="lbl">contractors interviewed across California</div></div>
       <div class="rz-stat reveal"><div class="num grad-text">1</div><div class="lbl">paying customer, and counting</div></div>
       <div class="rz-stat reveal"><div class="num grad-text">2 min</div><div class="lbl">per estimate, down from a full day</div></div>

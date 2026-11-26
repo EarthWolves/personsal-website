@@ -76,6 +76,30 @@ if (form) {
   });
 }
 
+// Merlo demo: highlight where each line item came from on the plan
+const demo = document.querySelector("[data-demo]");
+if (demo) {
+  const items = [...demo.querySelectorAll(".item")], layers = [...demo.querySelectorAll(".hl")];
+  const sheet = demo.querySelector("[data-sheet]"), sheetName = demo.querySelector("[data-sheetname]");
+  let cur = 0, paused = false;
+  const show = (i) => {
+    cur = i; const it = items[i];
+    items.forEach((x) => x.classList.toggle("on", x === it));
+    layers.forEach((l) => l.classList.toggle("on", l.dataset.k === it.dataset.k));
+    sheet.textContent = it.dataset.sheet; sheetName.textContent = it.dataset.sheetname;
+    sheet.style.setProperty("--cur", getComputedStyle(it).getPropertyValue("--c"));
+  };
+  items.forEach((it, i) => {
+    it.addEventListener("mouseenter", () => { paused = true; show(i); });
+    it.addEventListener("focus", () => { paused = true; show(i); });
+    it.addEventListener("click", () => { paused = true; show(i); });
+  });
+  demo.addEventListener("mouseleave", () => (paused = false));
+  show(0);
+  if (!matchMedia("(prefers-reduced-motion: reduce)").matches)
+    setInterval(() => { if (!paused && !document.hidden) show((cur + 1) % items.length); }, 2400);
+}
+
 // Reading progress (articles)
 const bar = document.querySelector(".progress");
 if (bar) addEventListener("scroll", () => {
