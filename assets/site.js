@@ -121,6 +121,7 @@ const COMMANDS = [
   { label: "Home", hint: "G H", run: () => (location.href = root + "index.html") },
   { label: "Merlo", hint: "G M", run: () => (location.href = root + "index.html#merlo") },
   { label: "Writing", hint: "G W", run: () => (location.href = root + "index.html#writing") },
+  { label: "Timeline", hint: "G T", run: () => (location.href = root + "index.html#timeline") },
   { label: "Gallery", hint: "G P", run: () => (location.href = root + "gallery.html") },
   { label: "Resume", hint: "you found it", run: () => (location.href = root + "resume.html") },
 ];
@@ -168,7 +169,7 @@ addEventListener("keydown", (e) => {
   // Linear-style "G then X" shortcuts
   if (e.key === "g") { gPressed = Date.now(); return; }
   if (Date.now() - gPressed < 800) {
-    const map = { m: "index.html#merlo", c: "index.html#contact", h: "index.html", w: "index.html#writing", p: "gallery.html", r: "resume.html" };
+    const map = { m: "index.html#merlo", c: "index.html#contact", h: "index.html", w: "index.html#writing", t: "index.html#timeline", p: "gallery.html", r: "resume.html" };
     if (map[e.key]) location.href = root + map[e.key];
   }
 });
